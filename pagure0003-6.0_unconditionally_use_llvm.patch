@@ -1,0 +1,46 @@
+-426d425
+-< ifneq ($(LLVM),)
+-435,438c434
+-< else
+-< HOSTCC	= gcc
+-< HOSTCXX	= g++
+-< endif
+----
+-> 
+-454d449
+-< ifneq ($(LLVM),)
+-463,472d457
+-< else
+-< CC		= $(CROSS_COMPILE)gcc
+-< LD		= $(CROSS_COMPILE)ld
+-< AR		= $(CROSS_COMPILE)ar
+-< NM		= $(CROSS_COMPILE)nm
+-< OBJCOPY		= $(CROSS_COMPILE)objcopy
+-< OBJDUMP		= $(CROSS_COMPILE)objdump
+-< READELF		= $(CROSS_COMPILE)readelf
+-< STRIP		= $(CROSS_COMPILE)strip
+-< endif
+-795d779
+-< ifdef CONFIG_CC_IS_CLANG
+-799,803d782
+-< else
+-< 
+-< # gcc inanely warns about local variables called 'main'
+-< KBUILD_CFLAGS += -Wno-main
+-< endif
+-834d812
+-< ifdef CONFIG_CC_IS_CLANG
+-838d815
+-< endif
+-1902d1878
+-< ifdef CONFIG_CC_IS_CLANG
+-1908,1912d1883
+-< else
+-< clang-tidy clang-analyzer:
+-< 	@echo "$@ requires CC=clang" >&2
+-< 	@false
+-< endif
+-
+-An error occurred
+-
+-An error occurred
