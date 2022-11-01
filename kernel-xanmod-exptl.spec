@@ -52,7 +52,7 @@ Patch1: fedora-config.diff
 # exptl 2022/06/02 -- adapt 5.18 changes
 # exptl 2022/08/03 -- adapt 5.19 changes
 # exptl 2022/10/04 -- adapt 6.0 changes
-Patch1000: pagure0003-6.0_unconditionally_use_llvm.patch
+#Patch1000: pagure0003-6.0_unconditionally_use_llvm.patch
 
 BuildRequires: python3-devel make perl-generators perl-interpreter openssl-devel bison flex findutils git-core perl-devel openssl elfutils-devel gawk binutils m4 tar hostname bzip2 bash gzip xz bc diffutils redhat-rpm-config net-tools elfutils patch rpm-build dwarves kmod libkcapi-hmaccalc perl-Carp rsync grubby
 %if %{llvm_kbuild}
